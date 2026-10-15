@@ -27,15 +27,16 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\Unity.ps1 -Project 'D:\Pro
 
 ## 从 GitHub 获取
 
-推荐从 Releases 下载 ZIP，解压后阅读 `INSTALL.zh-CN.md`。也可克隆本仓库后直接运行相同安装脚本：
+推荐从 Releases 下载 ZIP，解压后阅读 `INSTALL.zh-CN.md`。也可克隆本仓库，先下载已校验的 CLI，再运行相同安装脚本。可执行文件通过 Release ZIP 分发：
 
 ```powershell
 git clone https://github.com/0everey/unity-cli-2022-portable.git
 Set-Location .\unity-cli-2022-portable
+powershell -NoProfile -ExecutionPolicy Bypass -File .\Download-CLI.ps1
 powershell -NoProfile -ExecutionPolicy Bypass -File .\Verify.ps1
 powershell -NoProfile -ExecutionPolicy Bypass -File .\Install.ps1 -Project 'D:\Projects\MyGame'
 ```
 
-首个公开版本为 `v0.18.1-r1`。ZIP 提供 SHA256 校验文件，仓库文件由 `FILES.sha256.json` 记录。固定的 CLI 与 Roslyn 二进制随源码提供，Unity Editor、Python 和 Unity 包依赖由使用者按指南安装。
+首个公开版本为 `v0.18.1-r1`。ZIP 提供 SHA256 校验文件，仓库文件由 `FILES.sha256.json` 记录。固定 CLI 通过 Release ZIP 提供，Download-CLI.ps1 会校验 ZIP 与可执行文件的 SHA256；Roslyn 依赖随源码提供。Unity Editor、Python 和 Unity 包依赖由使用者按指南安装。
 
 MIT 许可见 [LICENSE](LICENSE)；随附上游许可和第三方程序集许可见 [NOTICE.md](NOTICE.md)。

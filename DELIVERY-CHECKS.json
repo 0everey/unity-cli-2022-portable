@@ -1,0 +1,62 @@
+{
+  "created": "2026-10-15",
+  "version": "0.18.1",
+  "adaptation": "unity2022-portable-r1",
+  "platform": "Windows x64",
+  "installer_checks": [
+    {
+      "check": "dry-run does not modify project",
+      "passed": true
+    },
+    {
+      "check": "Unicode/space-path install; all 379 files; duplicate refusal; input settings unchanged",
+      "passed": true
+    },
+    {
+      "check": "uninstall retires package and preserves later manifest dependencies",
+      "passed": true
+    },
+    {
+      "check": "wrong Unity version and lower Input System refused",
+      "passed": true
+    },
+    {
+      "check": "custom dependency, existing Bridge, UnityLockfile refused",
+      "passed": true
+    },
+    {
+      "check": "PowerShell wrapper preserves project/JSON paths with spaces; argument-only harness",
+      "passed": true
+    },
+    {
+      "check": "distribution file SHA256 integrity",
+      "passed": true
+    },
+    {
+      "check": "failed pre-copy install preserves a concurrently appearing foreign package",
+      "passed": true
+    }
+  ],
+  "fresh_unity": {
+    "fresh_install": true,
+    "real_unity_connection": true,
+    "unicode_space_project": true,
+    "unity": "2022.3.17f1c1",
+    "input_system": "1.7.0",
+    "checks": {
+      "tools": true,
+      "compilation": true,
+      "hierarchy": true
+    }
+  },
+  "compilation": {
+    "errors": 0,
+    "warnings": 2,
+    "is_compiling": false
+  },
+  "registered_tools": 157,
+  "test_editor_normal_exit_code": 0,
+  "bridge_source_files": 379,
+  "source_record": "verified installed r1; exact bytes restored where r2 development had begun",
+  "archive_integrity": "all packaged file SHA256 values verified after extraction"
+}
